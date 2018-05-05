@@ -4,8 +4,6 @@ import re
 import datetime
 import time
 
-
-
 if __name__ == "__main__":
     client = MongoClient('localhost', 27017)
     db = client.qq_database
@@ -17,7 +15,7 @@ if __name__ == "__main__":
 
     message_group_pattern = '^消息分组:(.*)\n'
     message_group_object = '^消息对象:(.*)\n'
-    message_single_pattern = '^(\d{4}-\d{2}-\d{2}) (\d{2}:\d{2}:\d{2}) (.*?)((\(|<)(.*)(\)|>))\n'
+    message_single_pattern = '^(\d{4}-\d{2}-\d{2}) (\d{2}:\d{2}:\d{2}) (.*)((\(|<)(.*)(\)|>))\n$'
 
     group_pattern = ''
     group_object = ''
